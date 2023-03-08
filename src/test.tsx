@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+interface Test {}
+
 const Test = () => {
   const [msg, setMsg] = useState("hello");
 
