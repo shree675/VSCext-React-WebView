@@ -12,7 +12,18 @@ import {
 } from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-  const message = "this is a prop passed from extension.ts";
+  const jsonObject = [
+    {
+      name: "abcd",
+      type: 6,
+    },
+    {
+      name: "xyz",
+      type: 8,
+    },
+  ];
+
+  const message = JSON.stringify(jsonObject);
 
   context.subscriptions.push(
     vscode.window.registerWebviewViewProvider(

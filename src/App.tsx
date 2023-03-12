@@ -21,9 +21,17 @@ class App extends React.Component<
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <br></br>
-        {this.props.parameter}
-        <Test />
+        <p>
+          {JSON.parse(this.props.parameter!).map((obj: any) => (
+            <>
+              <div>Name: {obj.name}</div>
+              <div>Type: {obj.type}</div>
+            </>
+          ))}
+        </p>
+        <p>
+          <Test />
+        </p>
       </div>
     );
   }
